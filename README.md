@@ -154,7 +154,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Discord: [@JorickJuh#4705](https://twitter.com/twitter_handle)
+Discord: [@JorickJuh#4705](https://discord.gg/vNfKR6DGRg)
 
 Project Link: [https://github.com/jorickjuh/Google-BeReal-Alarm](https://github.com/jorickjuh/Google-BeReal-Alarm)
 
