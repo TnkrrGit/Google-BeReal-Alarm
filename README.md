@@ -109,7 +109,10 @@ To get a local copy up and running follow these simple steps. If you want a more
    ```sh
    pip install -r requirements.txt
    ```
-4. Enter your API and other changes in the `config.yml`
+
+### Step 4 and 5 will be added in the future. For now just edit in the code
+
+<!-- 4. Enter your API and other changes in the `config.yml`
    ```yaml
    bereal_time_history_api: "YOUR_API_KEY"
    region: "YOUR_REGION"
@@ -117,7 +120,8 @@ To get a local copy up and running follow these simple steps. If you want a more
 5. You will have to change the chromecast_name to one of your google home device's name. If you have more than 1 google home, I would recommend you put all your google homes into a play group and place the play groups name in the device_name variable.
    ```yaml
    chromecast_name: "YOUR_GOOGLE_HOME_NAME"
-   ```
+   ``` -->
+
 6. Run the script
    ```sh
    python main.py
