@@ -1,0 +1,5 @@
+gTTS
+Flask
+pychromecast
+unicode_slugify
+pathlib
