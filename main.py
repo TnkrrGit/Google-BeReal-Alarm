@@ -1,13 +1,23 @@
+# Author: Jorick Bouw
+# Date: 2023-04-19
+# Description: BeReal Alarm with Google Home
+
+### Imports BeReal ###
+
 import requests
 import schedule
 import time
 from datetime import datetime
 
-API_KEY = 'BeReal Time History API Key'
+### BeReal Variables ###
+
+# Replace with your API key found on https://bereal.devin.fun/
 # Replace with your desired region found on https://bereal.devin.fun/
 REGION = 'europe-west'
 INTERVAL = 1  # Check the API every 1 seconds
-BeRealShot = False
+BeRealShot = False  # BeRealShot statement is defaulted to False
+
+### BeReal Functions ###
 
 
 def NieuweDag():
@@ -41,5 +51,6 @@ while True:
 
     if current_time >= str(latest_moment_datetime):
         trigger_alarm()
+
     schedule.run_pending()
     time.sleep(INTERVAL)

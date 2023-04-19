@@ -1,5 +1,4 @@
-gTTS
-Flask
-pychromecast
-unicode_slugify
-pathlib
+requests
+schedule
+time
+datetime
