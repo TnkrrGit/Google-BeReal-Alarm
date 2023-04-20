@@ -4,10 +4,11 @@
 # https://github.com/jorickjuh
 # Documentation:
 # https://github.com/jorickjuh/Google-BeReal-Alarm/wiki/Getting-it-Up-and-Running
-
+debug: false # Set to true to enable debug mode
 bereal:
-    bereal_time_history_api: (Your API Key)
+    bereal_time_history_api: (Your API)
     region: (Your Region) # us-central, europe-west, asia-west, asia-east
+    time_zone: (Your Timezone) # Timezone of your location in UTC+X format. So for the Netherlands it would be 2
 google:
-    device_name: (Your Device Name) # Device name or Group name in Google Home App 
-    alarm_url: (Your mp3 sound/alarm) # Can not use local files. Can only play uploaded sound files for example:(https://example.com/example.mp3)
+    device_name: (Your Device) # Device name or Group name in Google Home App 
+    alarm_url: (Your Alarm MP3 URL) # Can not use local files. Can only play uploaded sound files for example:(https://example.com/example.mp3)
