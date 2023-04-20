@@ -117,7 +117,7 @@ To get a local copy up and running follow these simple steps. If you want a more
    time_zone: "YOUR_TIMEZONE"
    ```
    
-5. You will have to change the chromecast_name to one of your google home device's name. If you have more than 1 google home, I would recommend you put all your google homes into a play group and place the play groups name in the device_name variable.
+5. You will have to change the device_name to one of your google home device's name. If you have more than 1 google home, I would recommend you put all your google homes into a play group and place the play groups name in the device_name variable.
    ```yaml
    device_name: "YOUR_GOOGLE_HOME_NAME"
    alarm_url: "YOUR_MP3_ALARM_URL"
