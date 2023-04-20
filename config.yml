@@ -1,0 +1,13 @@
+# Description: Configuration file for the Google BeReal Alarm 
+# Author: Jorick Bouw
+# Author URL:
+# https://github.com/jorickjuh
+# Documentation:
+# https://github.com/jorickjuh/Google-BeReal-Alarm/wiki/Getting-it-Up-and-Running
+
+bereal:
+    bereal_time_history_api: (Your API Key)
+    region: (Your Region) # us-central, europe-west, asia-west, asia-east
+google:
+    device_name: (Your Device Name) # Device name or Group name in Google Home App 
+    alarm_url: (Your mp3 sound/alarm) # Can not use local files. Can only play uploaded sound files for example:(https://example.com/example.mp3)
