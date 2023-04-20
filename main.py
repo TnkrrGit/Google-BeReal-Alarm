@@ -95,20 +95,23 @@ def trigger_alarm():
 schedule.every().day.at("00:00").do(NieuweDag)
 
 while True:
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    current_time = datetime.now().strftime('%H:%M:%S')
+    current_day = datetime.now().strftime('%Y-%m-%d')
 
     latest_moment_clean = get_latest_moment()
     latest_moment_datetime = datetime.strptime(
         latest_moment_clean, '%Y-%m-%d %H:%M:%S')
     dt_utc1 = latest_moment_datetime + timedelta(hours=timezone)
-    latest_moment = dt_utc1.strftime('%Y-%m-%d %H:%M:%S')
+    latest_moment_time = dt_utc1.strftime('%H:%M:%S')
+    latest_moment_day = dt_utc1.strftime('%Y-%m-%d')
 
-    if current_time >= str(latest_moment_datetime):
+    if current_time >= str(latest_moment_time) and current_day == str(latest_moment_day):
         trigger_alarm()
         # Debugging:
         if debug == True:
-            print(f"current_time: {current_time}")
-            print(f"latest_moment: {latest_moment}")
+            print(f"current_time: {current_time} current_day: {current_day}")
+            print(
+                f"latest_moment_time: {latest_moment_time} latest_moment_day: {latest_moment_day}")
 
     schedule.run_pending()
     time.sleep(INTERVAL)
