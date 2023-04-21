@@ -5,6 +5,7 @@
 # Documentation:
 # https://github.com/jorickjuh/Google-BeReal-Alarm/wiki/Getting-it-Up-and-Running
 debug: false # Set to true to enable debug mode
+linux: false # Set to true if you are running this on a Linux machine
 bereal:
     bereal_time_history_api: (Your API)
     region: (Your Region) # us-central, europe-west, asia-west, asia-east

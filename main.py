@@ -27,6 +27,7 @@ timezone = cfg['bereal']['time_zone']
 device_name = cfg['google']['device_name']
 alarm_url = cfg['google']['alarm_url']
 debug = cfg['debug']
+linux = cfg['linux']
 
 # Debugging:
 if debug == True:
@@ -37,24 +38,39 @@ if debug == True:
 
 ### Google Home Variables ###
 
-chromecast_name = device_name
-chromecasts = pychromecast.get_chromecasts()
-# Debugging:
-if debug == True:
-    print("\n\nChromeCasts List:\n\n", chromecasts, "\n\n")
-cast = next(
-    cc for cc in chromecasts if cc.device.friendly_name == chromecast_name)
-# Debugging:
-if debug == True:
-    print("\n\nSelected ChromeCast Information:\n\n", cast, "\n\n")
-mc = cast.media_controller
+if linux == False:
+    chromecast_name = device_name
+    chromecasts = pychromecast.get_chromecasts()
+    # Debugging:
+    if debug == True:
+        print("\n\nChromeCasts List:\n\n", chromecasts, "\n\n")
+    cast = next(
+        cc for cc in chromecasts if cc.device.friendly_name == chromecast_name)
+    # Debugging:
+    if debug == True:
+        print("\n\nSelected ChromeCast Information:\n\n", cast, "\n\n")
+    mc = cast.media_controller
+
+elif linux == True:
+    services, browser = pychromecast.discovery.discover_chromecasts()
+    pychromecast.discovery.stop_discovery(browser)
+    chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=[
+        device_name])
+    # Debugging:
+    if debug == True:
+        print("\n\nChromeCasts List:\n\n", chromecasts, "\n\n")
+    cast = chromecasts[0]
+    cast.wait()
+    # Debugging:
+    if debug == True:
+        print("\n\nSelected ChromeCast Information:\n\n", cast, "\n\n")
+    mc = cast.media_controller
 
 ### Google Home Functions ###
 
 
 def alarm():
-    mc.play_media(alarm_url,
-                  content_type="audio/mp3")
+    mc.play_media(alarm_url, 'audio/mp3')
     mc.block_until_active()
     mc.play()
 
