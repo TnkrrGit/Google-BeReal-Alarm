@@ -87,7 +87,8 @@ def get_latest_moment():
 def trigger_alarm():
     global BeRealShot
     if BeRealShot == False:
-        print("Alarm triggered! Bereal was on ", latest_moment)
+        print("Alarm triggered! Bereal was on ",
+              latest_moment_day, latest_moment_time)
         alarm()
         BeRealShot = True
 
