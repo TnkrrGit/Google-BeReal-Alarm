@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jorickjuh/Google-BeReal-Alarm">
-    <img src="assets/GHBALogo.png" alt="Logo" width="480" height="480">
+    <img src="assets/GHBALogo.png" alt="Logo" width="50%" height="20%">
   </a>
 
 <h3 align="center">Google BeReal Alarm</h3>
